@@ -18,8 +18,7 @@ if (!window.getComputedStyle) {
 var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
 
 
-$(document).ready(function(){
- 
+$(document).ready(function(){ 
 	/* we want to add all our a that target an image a class */
 	$('a[href*=".png"], a[href*=".gif"], a[href*=".jpg"]').addClass("let-there-be-light");
   	lightboxInit();
@@ -27,7 +26,6 @@ $(document).ready(function(){
 
 
 function lightboxInit() {
-  // console.log(size);
 
   $('.let-there-be-light').click(function(e){
     var positiontop= $(document).scrollTop();

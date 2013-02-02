@@ -19,16 +19,18 @@
 	body {
 	    margin: 0;
 	}
-	img {
-	  
-	  margin:0 auto;
-	  display:block;
+	img {	  
+		margin:0 auto;
+		display:block;
+		max-width: 100%;		
 	}
 	.content{
-	  max-width:960px;
-	  margin:0 auto;
+		max-width:960px;
+		margin:0 auto;
 	}
-	h1{text-align:center}
+	h1{
+		text-align:center
+	}
 	.credits{
 		margin-top:10px;
 		padding:10px;
@@ -92,6 +94,9 @@
 
 			<p>
 				The script automatically finds all the links that link to a .png, .jpg or .gif file, and add the class that the lightbox needs.
+			</p>
+			<p>
+				We could also use the e.preventDefault(); to make the image not be opened in the browser for smaller screens
 			</p>
 			<p>The lightbox is placed given to the user scroll.</p>
 			<p class="warning">

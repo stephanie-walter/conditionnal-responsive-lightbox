@@ -1,8 +1,9 @@
 Conditionnal Responsive Lightbox
 ================================
 
-
 This is a conditionnal lightbox that is and extension of Brad Frost's article <a href="http://bradfrostweb.com/blog/post/conditional-lightbox/">Conditional Lightbox</a> and <a href="http://codepen.io/bradfrost/full/tfCAp">codepen demo </a>
+
+You can <a href="http://inpixelitrust.fr/demos/conditionnal-responsive-lightbox/">see a demo online.</a>
 
 It is based on media queries detections so that smaller devices that support media queries won't open the lightbox (read the article for further explanation)
 
@@ -11,6 +12,8 @@ It is based on media queries detections so that smaller devices that support med
 3. using JS, we will display or not the lightbox depending on mq support and screen size.
 
 The script automatically finds all the links that link to a .png, .jpg or .gif file, and add the class that the lightbox needs.
+
+We could also use the e.preventDefault(); to make the image not be opened in the browser for smaller screens
 
 The lightbox is placed given to the user scroll.
 
