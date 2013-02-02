@@ -7,7 +7,7 @@ You can <a href="http://inpixelitrust.fr/demos/conditionnal-responsive-lightbox/
 
 It is based on media queries detections so that smaller devices that support media queries won't open the lightbox (read the article for further explanation)
 
-1. We check if there is a media queries support, using the CSS part   @media all and (min-width: 1em) and (max-width: 45em) and adding a "mqsupport" to the body. For browser that don't support media queries, we just open the lightbox
+1. We check if there is a media queries support, using the CSS part   @media all and (min-width: 1em) and (max-width: 45em) and adding a "mqsupport" to the body. For browsers like old IEs that don't support media queries, we just open the lightbox, assuming they've a fixed width container (instead of max-width)
 2. If the viewport size is bigger than 45em, we use @media all and (min-width: 45em) to add the "widescreen" content to the body
 3. using JS, we will display or not the lightbox depending on mq support and screen size.
 
