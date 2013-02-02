@@ -17,5 +17,5 @@ We could also use the e.preventDefault(); to make the image not be opened in the
 
 The lightbox is placed given to the user scroll.
 
-Warning : This is a pretty messed up technique. Seriously. Chrome sends back widescreen an Firefox sends back "widescreen" (yes with the double quotes) as value of var size. This forces use to make two tests. So use it at your own risks :) 
+Warning : This is a pretty messed up technique. Seriously. Chrome sends back widescreen and Firefox sends back "widescreen" (yes with the double quotes) as value of var size. This forces use to make two tests. So use it at your own risks :) 
 
