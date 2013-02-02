@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lte IE 6]> <html class="no-js ie6 ie67 ie678" lang="fr"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 ie67 ie678" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="fr"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=10">
+	<title></title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="styles.css" media="all">
+	<style>
+	html {
+    font-family: sans-serif; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+	}
+	body {
+	    margin: 0;
+	}
+	img {
+	  
+	  margin:0 auto;
+	  display:block;
+	}
+	.content{
+	  max-width:960px;
+	  margin:0 auto;
+	}
+	h1{text-align:center}
+	.credits{
+		margin-top:10px;
+		padding:10px;
+		font-style:italic;
+		background:rgb(228, 229, 229);
+		border:1px dashed rgb(146, 146, 146);
+	}
+	.warning{
+		color:rgb(209, 20, 61);
+
+	}
+	.download{
+		text-align:center;
+		margin:30px 0 ;
+	}
+	.download a{
+		font-style:normal;
+		text-decoration:none;
+		color:rgb(232, 244, 253);
+		background:rgb(21, 128, 205);
+		padding:15px 10px;
+		-webkit-transition:all 0.2s;
+		-moz-transition:all 0.2s;
+		-o-transition:all 0.2s;
+		-ms-transition:all 0.2s;
+		transition:all 0.2s;
+	}
+	.download a:hover{
+		background:rgb(10, 78, 126);
+	}
+
+	</style>
+
+</head>
+<body>
+<div class="content">
+	<h1>Conditional Lightbox using media queries</h1>
+	<a href="bigsize.jpg" class="let-there-be-light">
+		<img src="preview.jpg" alt="" />
+	</a>
+	<div class="credits">
+		<p>
+			This is a conditionnal lightbox that is and extension of Brad Frost's article
+			<a href="http://bradfrostweb.com/blog/post/conditional-lightbox/">Conditional Lightbox</a>
+			and
+			<a href="http://codepen.io/bradfrost/full/tfCAp">codepen demo</a>
+		</p>
+		<p>
+			It is based on media queries detections so that smaller devices that support media queries won't open the lightbox (read the article for further explanation)
+			<ol>
+				<li>
+					We check if there is a media queries support, using the CSS part   @media all and (min-width: 1em) and (max-width: 45em) and adding a "mqsupport" to the body. For browser that don't support media queries, we just open the lightbox
+				</li>
+				<li>
+					If the viewport size is bigger than 45em, we use @media all and (min-width: 45em) to add the "widescreen" content to the body
+				</li>
+				<li>
+					using JS, we will display or not the lightbox depending on mq support and screen size.
+				</li>
+			</ol>
+
+			<p>
+				The script automatically finds all the links that link to a .png, .jpg or .gif file, and add the class that the lightbox needs.
+			</p>
+			<p>The lightbox is placed given to the user scroll.</p>
+			<p class="warning">
+				Warning : This is a pretty messed up technique. Seriously. Chrome sends back widescreen an Firefox sends back "widescreen" (yes with the double quotes) as value of var size. This forces use to make two tests. So use it at your own risks :)
+			</p>
+			<p class="download">
+				<a href="https://github.com/inpixelitrust/conditionnal-responsive-lightbox">You can download and see the whole code on github</a>
+			</p>
+		</div>
+
+		<p>
+			A lightbox that only initiates when enough screen space is available. The default behavior links through to the larger image asset providing a better experience for small screen users, while still providing a lightbox experience when it makes contextual sense.
+			<a href=" http://bradfrostweb.com/blog/post/conditional-lightbox/">Read more about conditional lightbox</a>
+		</p>
+		<p>More text for a bigger page !</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<a href="bigsize.jpg" class="let-there-be-light">
+			<img src="preview.jpg" alt="" />
+		</a>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum.
+			<a href="#">Danish macaroon liquorice</a>
+			pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+		<p>
+			Candy canes danish sugar plum. Danish macaroon liquorice pudding. Sesame snaps soufflé caramels wafer applicake jelly-o halvah lemon drops. Tootsie roll chocolate cake icing carrot cake croissant sesame snaps toffee jelly. Sugar plum jelly beans oat cake donut topping. Sweet roll soufflé dessert chupa chups ice cream jelly beans bear claw sugar plum apple pie. Bonbon wypas toffee cookie. Toffee jujubes pie bonbon toffee candy. Brownie dragée dessert chupa chups bonbon. Apple pie bear claw jelly candy. Cheesecake halvah powder wafer jelly-o macaroon chocolate bar. Candy wafer cake marshmallow sugar plum. Gummies topping jujubes marzipan ice cream gummies chocolate sesame snaps bonbon.
+		</p>
+
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script src="contionnal-responsive-lightbox.js"></script>
+
+</body>
+</html>
