@@ -37,7 +37,7 @@ function lightboxInit() {
   	      buildLightBox($thisHref,positiontop);
       }
     else{
-     /* we used a mq from 1px to 779 to check if mq is supported or not, if not, we open the bog (old browser that won't use RWD anyway) */ 
+     /* we used a mq from 1px to 45em to check if mq is supported or not, if not, we open the bog (old browser that won't use RWD anyway) */ 
     if(!(size === 'mqsupport' || size === '"mqsupport"') ){
         e.preventDefault();
         var $thisHref = $(this).attr('href');
